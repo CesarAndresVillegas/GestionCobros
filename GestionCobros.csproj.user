@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>ftp://ftpcobro_wiladi%40publirecargas.com/|ftp://ftppunto_ventas%40publirecargas.com/|ftp://ftp.publirecargas.com/|ftp.publirecargas.com\|ftp.publirecargas.com</PublishUrlHistory>
+    <InstallUrlHistory />
+    <SupportUrlHistory />
+    <UpdateUrlHistory>http://www.publirecargas.com/ftpcobro_wiladi/|http://www.publirecargas.com/pruebas_cobro/|http://www.publirecargas.com/ftpcobros/</UpdateUrlHistory>
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DC45283F-AF91-4A82-B911-BCC93373BF40}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GestionCobrosWiladi</RootNamespace>
+    <AssemblyName>GestionCobrosWiladi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>ftp://ftpcobro_wiladi%40publirecargas.com/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://www.publirecargas.com/ftpcobro_wiladi/</UpdateUrl>
+    <TargetCulture>es-CO</TargetCulture>
+    <ProductName>GestionC</ProductName>
+    <PublisherName>GestionC</PublisherName>
+    <SuiteName>GestionC</SuiteName>
+    <MinimumRequiredVersion>1.0.0.1</MinimumRequiredVersion>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>6B534ACCBACF3222F46D60F9EC3A07B09A2AF425</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>GestionCobros_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>currency_black_dollar.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Excel\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Caja\AjustesCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caja\AjustesCaja.Designer.cs">
+      <DependentUpon>AjustesCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Caja\EstadoCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caja\EstadoCaja.Designer.cs">
+      <DependentUpon>EstadoCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Caja\HistorialCierresCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caja\HistorialCierresCaja.Designer.cs">
+      <DependentUpon>HistorialCierresCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Caja\MovimientosDeCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caja\MovimientosDeCaja.Designer.cs">
+      <DependentUpon>MovimientosDeCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Caja\SaldoInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caja\SaldoInicial.Designer.cs">
+      <DependentUpon>SaldoInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\AsignacionCupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\AsignacionCupos.Designer.cs">
+      <DependentUpon>AsignacionCupos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\ConfirmacionPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\ConfirmacionPago.Designer.cs">
+      <DependentUpon>ConfirmacionPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\ConsultarRegistrosPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\ConsultarRegistrosPago.Designer.cs">
+      <DependentUpon>ConsultarRegistrosPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\CreacionClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\CreacionClientes.Designer.cs">
+      <DependentUpon>CreacionClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\incumplimientosDetalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\incumplimientosDetalles.Designer.cs">
+      <DependentUpon>incumplimientosDetalles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\ListarCuotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\ListarCuotas.Designer.cs">
+      <DependentUpon>ListarCuotas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\MensajeConfirmacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\MensajeConfirmacion.Designer.cs">
+      <DependentUpon>MensajeConfirmacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\ModificarDocumentoClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\ModificarDocumentoClientes.Designer.cs">
+      <DependentUpon>ModificarDocumentoClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\RegistrarPagoDetalleGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\RegistrarPagoDetalleGrid.Designer.cs">
+      <DependentUpon>RegistrarPagoDetalleGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\RegistrarPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\RegistrarPagos.Designer.cs">
+      <DependentUpon>RegistrarPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\RegistrarPagosDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\RegistrarPagosDetalle.Designer.cs">
+      <DependentUpon>RegistrarPagosDetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuracion\Rutas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuracion\Rutas.Designer.cs">
+      <DependentUpon>Rutas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuracion\Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuracion\Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrameworkDatos\Ayuda.cs" />
+    <Compile Include="FrameworkDatos\Datos.cs" />
+    <Compile Include="FrameworkDatos\Mensajes.cs" />
+    <Compile Include="FrameworkDatos\VGlobales.cs" />
+    <Compile Include="Informes\ClientesMora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informes\ClientesMora.Designer.cs">
+      <DependentUpon>ClientesMora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\HistorialClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informes\HistorialClientes.Designer.cs">
+      <DependentUpon>HistorialClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\HistorialRecaudos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informes\HistorialRecaudos.Designer.cs">
+      <DependentUpon>HistorialRecaudos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rutas\ConsultarRutas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rutas\ConsultarRutas.Designer.cs">
+      <DependentUpon>ConsultarRutas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rutas\RegistrarCumplimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rutas\RegistrarCumplimiento.Designer.cs">
+      <DependentUpon>RegistrarCumplimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rutas\RegistrarSaldoCobrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rutas\RegistrarSaldoCobrador.Designer.cs">
+      <DependentUpon>RegistrarSaldoCobrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rutas\SaldosCobradores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rutas\SaldosCobradores.Designer.cs">
+      <DependentUpon>SaldosCobradores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rutas\ValidarCierre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rutas\ValidarCierre.Designer.cs">
+      <DependentUpon>ValidarCierre.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Caja\AjustesCaja.resx">
+      <DependentUpon>AjustesCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caja\EstadoCaja.resx">
+      <DependentUpon>EstadoCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caja\HistorialCierresCaja.resx">
+      <DependentUpon>HistorialCierresCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caja\MovimientosDeCaja.resx">
+      <DependentUpon>MovimientosDeCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caja\SaldoInicial.resx">
+      <DependentUpon>SaldoInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\AsignacionCupos.resx">
+      <DependentUpon>AsignacionCupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\ConfirmacionPago.resx">
+      <DependentUpon>ConfirmacionPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\ConsultarRegistrosPago.resx">
+      <DependentUpon>ConsultarRegistrosPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\CreacionClientes.resx">
+      <DependentUpon>CreacionClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\incumplimientosDetalles.resx">
+      <DependentUpon>incumplimientosDetalles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\ListarCuotas.resx">
+      <DependentUpon>ListarCuotas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\MensajeConfirmacion.resx">
+      <DependentUpon>MensajeConfirmacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\ModificarDocumentoClientes.resx">
+      <DependentUpon>ModificarDocumentoClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\RegistrarPagoDetalleGrid.resx">
+      <DependentUpon>RegistrarPagoDetalleGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\RegistrarPagos.resx">
+      <DependentUpon>RegistrarPagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\RegistrarPagosDetalle.resx">
+      <DependentUpon>RegistrarPagosDetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuracion\Rutas.resx">
+      <DependentUpon>Rutas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuracion\Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\ClientesMora.resx">
+      <DependentUpon>ClientesMora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\HistorialClientes.resx">
+      <DependentUpon>HistorialClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\HistorialRecaudos.resx">
+      <DependentUpon>HistorialRecaudos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Rutas\ConsultarRutas.resx">
+      <DependentUpon>ConsultarRutas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rutas\RegistrarCumplimiento.resx">
+      <DependentUpon>RegistrarCumplimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rutas\RegistrarSaldoCobrador.resx">
+      <DependentUpon>RegistrarSaldoCobrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rutas\SaldosCobradores.resx">
+      <DependentUpon>SaldosCobradores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rutas\ValidarCierre.resx">
+      <DependentUpon>ValidarCierre.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="GestionCobros_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="currency_black_dollar.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
